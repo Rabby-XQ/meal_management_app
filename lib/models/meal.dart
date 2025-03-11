@@ -1,9 +1,11 @@
+import 'package:flutter/material.dart';
+
 class Meal {
   final String id;
   final String userId;
-  final int breakfast;
-  final int lunch;
-  final int dinner;
+  int breakfast;
+  int lunch;
+  int dinner;
   final DateTime date;
 
   Meal({
@@ -24,16 +26,5 @@ class Meal {
       'dinner': dinner,
       'date': date.toIso8601String(),
     };
-  }
-
-  static Meal fromMap(Map<String, dynamic> map) {
-    return Meal(
-      id: map['id'],
-      userId: map['userId'],
-      breakfast: map['breakfast'],
-      lunch: map['lunch'],
-      dinner: map['dinner'],
-      date: DateTime.parse(map['date']),
-    );
   }
 }

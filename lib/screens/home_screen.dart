@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/theme_provider.dart';
 import 'admin_dashboard.dart';
+import 'meal_history_screen.dart';  // Import Meal History Screen
 import 'meal_manager_screen.dart';
 import 'profile_screen.dart';
+import 'meal_entry_screen.dart';  // Import Meal Entry Screen
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -32,6 +34,10 @@ class HomeScreen extends StatelessWidget {
             _customButton(context, "Meal Manager", MealManagerScreen()),
             SizedBox(height: 16),
             _customButton(context, "Member Dashboard", ProfileScreen()),
+            SizedBox(height: 16),
+            _customButton(context, "Meal History", MealHistoryScreen()),  // ✅ Added Meal History Button
+            SizedBox(height: 16),
+            _customButton(context, "Log Meal", MealEntryScreen()),  // ✅ Log Meal Button
           ],
         ),
       ),
